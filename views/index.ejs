@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pic-Share__Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main >
+    <h1>Pic-Share__Gallery </h1>
+
+
+    <div class="gallery">
+        
+        <% photos.forEach(photo => { %>
+            <div class="photo">
+                <img src="<%= photo.imageUrl %>" alt="<%= photo.title %>" height="300px" width="200px">
+                <h3>Title: <%= photo.title %></h3>
+                <p>Description: <%= photo.description %></p>
+            </div>
+        <% }); %>
+    </div>
+
+    <a href="/upload">Upload a new photo</a>
+
+    </main>
+</body>
+</html>
